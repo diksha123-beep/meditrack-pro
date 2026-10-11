@@ -1,0 +1,261 @@
+
+.settings-page {
+  --bg: #f4f7f6;
+  --card: #ffffff;
+  --text: #142d2b;
+  --muted: #71817f;
+  --border: #e6ece9;
+  --accent: #d8f56b;
+
+  min-height: 100vh;
+  padding: 32px;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Arial, sans-serif;
+}
+
+.settings-page * {
+  box-sizing: border-box;
+}
+
+.settings-dark {
+  --bg: #14201f;
+  --card: #20302e;
+  --text: #f2f7f5;
+  --muted: #b5c2bf;
+  --border: #394b48;
+}
+
+.settings-header {
+  max-width: 1050px;
+  margin: 0 auto 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.settings-kicker {
+  color: #5b8060;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.settings-header h1 {
+  margin: 8px 0;
+  font-size: 32px;
+}
+
+.settings-header p,
+.settings-panel-subtitle {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.settings-panel {
+  max-width: 1050px;
+  margin: 0 auto 22px;
+  padding: 24px 28px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 17px;
+  box-shadow: 0 5px 22px #152c2b08;
+}
+
+.settings-panel h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.settings-panel-subtitle {
+  margin: 7px 0 12px;
+}
+
+.settings-row {
+  min-height: 82px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  border-bottom: 1px solid var(--border);
+  padding: 17px 0;
+}
+
+.settings-row:last-of-type {
+  border-bottom: none;
+}
+
+.settings-row h3,
+.settings-notice h3 {
+  margin: 0;
+  font-size: 14px;
+}
+
+.settings-row p {
+  margin: 7px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.settings-row select {
+  min-width: 120px;
+  padding: 11px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.settings-toggle {
+  width: 44px;
+  height: 25px;
+  flex-shrink: 0;
+  position: relative;
+  border: none;
+  border-radius: 30px;
+  background: #cbd4d1;
+  cursor: pointer;
+}
+
+.settings-toggle span {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  background: white;
+  transition: transform 0.2s;
+}
+
+.settings-toggle.active {
+  background: #2fc66b;
+}
+
+.settings-toggle.active span {
+  transform: translateX(19px);
+}
+
+.settings-notice {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: 13px;
+  background: var(--bg);
+}
+
+.settings-notice-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.settings-notice-title > span {
+  font-size: 25px;
+}
+
+.settings-notice-title p {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.settings-notice > p,
+.settings-notice li,
+.settings-note {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.settings-note {
+  margin-bottom: 0;
+}
+
+.settings-save,
+.settings-secondary {
+  padding: 12px 16px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.settings-save {
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: #193322;
+}
+
+.settings-secondary {
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--text);
+}
+
+.settings-footer {
+  max-width: 1050px;
+  margin: 25px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.settings-footer > span {
+  color: #23844c;
+  font-size: 13px;
+}
+
+.settings-footer > div {
+  display: flex;
+  gap: 10px;
+}
+
+@media (max-width: 600px) {
+  .settings-page {
+    padding: 18px 12px;
+  }
+
+  .settings-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .settings-header h1 {
+    font-size: 27px;
+  }
+
+  .settings-panel {
+    padding: 20px 16px;
+  }
+
+  .settings-row {
+    gap: 10px;
+  }
+
+  .settings-row p {
+    max-width: 220px;
+  }
+
+  .settings-row select {
+    min-width: 95px;
+    max-width: 115px;
+  }
+
+  .settings-footer {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .settings-footer > div {
+    width: 100%;
+  }
+
+  .settings-footer button {
+    flex: 1;
+  }
+}
